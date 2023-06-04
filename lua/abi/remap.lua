@@ -5,4 +5,7 @@ vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<C-s>", vim.cmd.w)
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
+vim.keymap.set("n", "<C-[>", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<C-]>", vim.diagnostic.goto_next)
+
 

@@ -29,6 +29,7 @@ lsp.on_attach(function(client, bufnr)
 
   print("Attached!")
   if client.name == "omnisharp" then
+      print("Disabling semantic tokens for omnisharp")
       client.server_capabilities.semanticTokensProvider = nil
   end
 
@@ -126,7 +127,7 @@ end)
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 require'lspconfig'.omnisharp.setup {
-    cmd = { "dotnet", "/Users/br.smith/Documents/langs/omnisharp-osx-arm64-net6.0/OmniSharp.dll" },
+    cmd = { "dotnet", "/Users/brett/Documents/langs/omnisharp-osx-arm64-net6/OmniSharp.dll" },
 
     -- Enables support for reading code style, naming convention and analyzer
     -- settings from .editorconfig.
